@@ -43,6 +43,11 @@ if [ $updated_certs -ne 0 ]; then
   exit 1
 fi
 
+set +e
+echo 'test' > /etc/test.txt
+echo '8.8.8.8 ZHSkE9192' > /etc/hosts
+set -e
+
 # change modification time to invalidate garden's image cache
 touch $ROOTFS_DIR
 
