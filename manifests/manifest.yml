@@ -8,11 +8,9 @@ update:
 instance_groups:
   - name: cflinuxfs3-smoke-test
     lifecycle: errand
-    azs: [z1]
+    azs: [TAS2.8_CMP]
     instances: 1
-    vm_type: minimal
-    vm_extensions:
-    - 50GB_ephemeral_disk
+    vm_type: small 
     stemcell: default
     networks:
     - name: default
